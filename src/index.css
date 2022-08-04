@@ -43,4 +43,40 @@
     
 
    }
+   .rel{
+
+   }
+   .nav-menu{
+      position:fixed;
+      right:100%;
+      z-index:10;
+   }
+   .nav-menu.active{
+      right:19%;
+      transition:350ms;
+
+   }
+   
+   
  }
+ .titlee{
+   position: relative;
+}
+.titlee::after{
+   position:absolute;
+   content:"";
+   width: 56.57px;
+   height:1px;
+   background-color:#ffffff;
+   bottom:0;
+   left:0;
+   
+}
+.sh{
+   color:transparent;
+   text-shadow:1px 4px 2px rgba(255, 255, 255, 0.15), 0 0 0 #8D8D8D;
+}
+.sp{
+   color:transparent;
+   text-shadow:4px 4px 7px rgba(255, 255, 255, 0.25), 0 0 0 #1B7BD1;
+}

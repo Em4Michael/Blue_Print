@@ -1,25 +1,74 @@
-import React from "react"
+import React, { useState } from "react"
 import logo from "../Images/logo.png"
 import BG from "../Images/BG.png"
+import {Link } from 'react-router-dom'
 
 import { HiMenuAlt1 } from "react-icons/hi"
+import { AiOutlineClose } from "react-icons/ai";
+import { SidebarData } from "./SidebarData"
+
 
 function Home() {
   const backgroundImageStyle = {
     backgroundImage: `url("${BG}")`,
     backgroundSize: "cover",
   }
+  const [sidebar, setSidebar] = useState(false)
+  const showSidebar = () => setSidebar(!sidebar)
   return (
     <>
       <div className='grid'>
-        <div className='bg-[#105899] flex justify-between items-center max-h-10'>
+        <div className='bg-[#105899] flex justify-between items-center max-h-10 relative'>
           <div className='ml-5'>
             <img src={logo} alt='' type='image/png' />
+           
           </div>
+       <div className={sidebar ? 'nav-menu active': 'nav-menu'} >
+       <div className="z-10 mt-[250px] bg-[#03192CCF] w-[160px] h-[302px] pt-[40.29px]  ">
+          
+         
+               <ul onClick={showSidebar}>
+                 <li>
+                 
+                 </li>
+                 {SidebarData.map((item, index)=>{
+                   return(
+                    <div className="pl-[40.25px]">
+                      <li key={index}>
+                       <Link to={item.path}>
+                         <h5 className="font-[Karla] text-[11.36px] font-[400] leading-[32.65px] text-white pl-[13.25px]">{item.title}</h5>
+                         
+                       </Link>
+                     </li>
+                     <hr />
+                    </div>
+                 
+                   )
+                 })}
+ 
+               </ul>
+ 
+            
+             <div className="w-[39.75px] bg-[#105899] h-[552px] absolute top-0 pl-[19.19px] pt-[19.19px]">
+             <Link to='#' className="menu-bars" onClick={showSidebar}>
+                   <AiOutlineClose className="w-[8.28px] text-white  "/>
+                   
+                   </Link>
+ 
+             </div>
+             
+        
+          </div>
+       </div>
           <div>
             <div className='mr-5 text-white'>
-              <HiMenuAlt1 />
+            <Link to='#' className="menu-bars">
+                  <HiMenuAlt1 onClick={showSidebar}  />
+                  </Link>
+
+             
             </div>
+            
           </div>
         </div>
         <div className='' style={backgroundImageStyle}>

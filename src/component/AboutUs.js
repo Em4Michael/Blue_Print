@@ -3,7 +3,7 @@ import About from "../Images/About.png"
 function AboutUs() {
   return (
     <>
-      <div className='text-[16.32px] text-[#666666] font-[700] leading-[19px] font-[Karla] mt-[42px] ml-[25px] uppercase pb-[4px] title'>
+      <div className='text-[16.32px] text-[#666666] font-[700] leading-[19px] font-[Karla] mt-[42px] ml-[25px] uppercase pb-[4px]  title'>
         ABOUT US
       </div>
       <div className='flex justify-between pl-[27.54px] pt-[35.7px]'>
