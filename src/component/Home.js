@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import logo from "../Images/logo.png"
+import newLogo from '../Images/blueprint-logo.png'
 import BG from "../Images/BG.png"
 import {Link } from 'react-router-dom'
+import hamburger from '../Images/hambug.png'
 
 import { HiMenuAlt1 } from "react-icons/hi"
 import { AiOutlineClose } from "react-icons/ai";
@@ -17,7 +19,7 @@ function Home() {
   const showSidebar = () => setSidebar(!sidebar)
   return (
     <>
-      <div className='grid'>
+      {/* <div className='grid'>
         <div className='bg-[#105899] flex justify-between items-center max-h-10 relative'>
           <div className='ml-5'>
             <img src={logo} alt='' type='image/png' />
@@ -85,6 +87,23 @@ function Home() {
             <button>GET STARTED</button>
             </div>
           </div>
+        </div>
+      </div> */}
+      <div className='grid-container header-content'>
+        <div className="container-div" id="nav-menu">
+        <img src={hamburger} alt='' id="ham" type='image/png' />
+        </div>
+        <div className="container-div" id="big-banner">
+        <div className="logo-space">
+            <img src={newLogo} alt='' id="our-logo" type='image/png' />
+            </div>
+        </div>
+        <div className="inner-slider-content">
+          <h4 className="pre-heading">Welcome to the cave</h4>
+          <h1 className="headline">
+          IN OUR SPACE WE ALWAYS DELIVER MORE THAN EXPECTED
+          </h1>
+          <a href="#" className="blue-button">GET STARTED</a>
         </div>
       </div>
     </>
